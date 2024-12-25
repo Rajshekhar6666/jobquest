@@ -1,0 +1,342 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background: #f4f8fb;
+    color: #333;
+    overflow-x: hidden;
+  }
+  
+  /* Navbar */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: linear-gradient(90deg, #ff6f91, #ff9671);
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  header .logo {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  header ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  header ul li a,
+  .btn-login {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  header ul li a:hover,
+  .btn-login:hover {
+    color: #ffd166;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(120deg, #ff6f91, #ff9671);
+    color: #fff;
+    text-align: center;
+    padding: 6rem 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero::after {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 150px;
+    height: 150px;
+    background: #ffd166;
+    opacity: 0.5;
+    border-radius: 50%;
+    animation: move 5s infinite ease-in-out alternate;
+  }
+  
+  .hero h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .hero .cta-btn {
+    background: #ffd166;
+    color: #333;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .hero .cta-btn:hover {
+    background: #ffcc00;
+    transform: scale(1.1);
+  }
+  
+  /* About Section */
+  .about {
+    padding: 3rem 2rem;
+    text-align: center;
+    background: #fef9f9;
+  }
+  
+  .about h2 {
+    font-size: 2.5rem;
+    color: #ff6f91;
+  }
+  
+  .about p {
+    font-size: 1.2rem;
+    margin: 1rem auto;
+    max-width: 700px;
+    color: #555;
+  }
+  
+  .about-features {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .feature {
+    background: linear-gradient(120deg, #ffcc00, #ffd166);
+    color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .feature:hover {
+    transform: translateY(-10px);
+  }
+  
+  .feature i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Jobs Section */
+  .jobs {
+    padding: 3rem 2rem;
+    background: linear-gradient(90deg, #ff6f91, #ff9671);
+    color: #fff;
+    text-align: center;
+  }
+  
+  .jobs h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .job-filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .job-filters input,
+  .job-filters select {
+    padding: 0.8rem 1rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  .job-filters input:focus,
+  .job-filters select:focus {
+    transform: scale(1.05);
+  }
+  
+  .job-listing {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .job-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+    width: 300px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .job-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .job-card h3 {
+    color: #ff6f91;
+  }
+  
+  .job-card p {
+    margin: 0.5rem 0;
+  }
+  
+  .job-card button {
+    background: #ffd166;
+    color: #333;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  
+  .job-card button:hover {
+    background: #ffcc00;
+  }
+  
+  /* Contact Section */
+  .contact {
+    padding: 3rem 2rem;
+    background: #ff9671;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contact p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .contact form {
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .contact input,
+  .contact textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+  }
+  
+  .contact button {
+    background: #ffd166;
+    color: #333;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  
+  .contact button:hover {
+    background: #ffcc00;
+  }
+  
+  /* Footer */
+  footer {
+    padding: 1rem 2rem;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  
+  /* Modals */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    max-width: 400px;
+    width: 90%;
+  }
+  
+  .modal .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .modal-btn {
+    background: #ff6f91;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .modal-btn:hover {
+    background: #ff9671;
+  }
+  
+  /* Keyframes */
+  @keyframes move {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-20px);
+    }
+  }
